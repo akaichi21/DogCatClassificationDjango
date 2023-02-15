@@ -1,1 +1,1 @@
-"# Dog And Cat Classification Django" 
+# Dog And Cat Classification Django
