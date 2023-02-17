@@ -1,0 +1,32 @@
+{% extends 'app/layouts/base.html' %} {% block content %}
+<div class="row">
+    <div class="col-md-12 col-lg-6">
+        <h1 id="title">
+            Artificial Intelligence Tools SPECIALIZING IN processing AND
+            ANALYZING digital IMAGES
+        </h1>
+        <p id="content" class="py-2">
+            Our website provide solutions to resolve DIP issues, concentrating
+            on identifying species of animals based on the images you upload.
+            Using the sophisticated technology, our team will definitely
+            accommodate all your needs for your highest convenience.
+        </p>
+    </div>
+    <div class="col-md-12 col-lg-6">
+        <div class="row">
+            <div class="col-12">
+                <div class="card shadow" id="card-1">
+                    <h1>ANIMALS IDENTIFICATION</h1>
+                </div>
+                <div class="text-center">
+                    <a
+                        href="{% url 'app:services' %}"
+                        class="btn btn-info card-button mt-3"
+                        >Click here to discover our service!</a
+                    >
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

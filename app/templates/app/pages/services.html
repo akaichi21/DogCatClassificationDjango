@@ -1,0 +1,47 @@
+{% extends 'app/layouts/base.html' %} {% block content %}
+<div class="row category">
+    <h1>Our service</h1>
+</div>
+<form
+    action="{% url 'app:services' %}"
+    method="post"
+    enctype="multipart/form-data"
+>
+    {% csrf_token %}
+    <div class="row card-detail-row mb-5" id="img">
+        <div class="col-12 mt-3 mb-1">
+            <h2>ANIMAL IDENTIFICATION</h2>
+        </div>
+        <div class="col-md-12 col-lg-6 upload-box">
+            <div class="image">
+                {% if service == 'img' %}
+                <img src="{{url}}" alt="" class="active" />
+                {% endif %}
+
+                <div>
+                    <i class="m-2 upload-icon fas fa-cloud-upload-alt"></i>
+                    <br />Please select a file <br />
+                    to begin the process!
+                </div>
+                <input name="img" type="file" />
+            </div>
+        </div>
+
+        <div class="col-md-12 col-lg-6">
+            <div class="image">
+                <div>
+                    {% if result %} Đây là con {{result}}. {% else %} Once you
+                    upload your image, <br />the result will appear here.
+                    {%endif %}
+                    <strong></strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button data-id="{{service}}" type="submit" style="display: none">
+        SUBMIT {{service}}
+    </button>
+</form>
+
+{% endblock content %}
