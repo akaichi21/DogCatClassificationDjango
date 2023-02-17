@@ -5,7 +5,7 @@ from keras.models import load_model
 import cv2
 import numpy as np
 
-model = load_model('./model/DogCatClassification.h5')
+model = load_model('./model/dog_cat_classification.h5')
 
 # Create your views here.
 def home(request):
