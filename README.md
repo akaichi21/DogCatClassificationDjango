@@ -1,4 +1,4 @@
-# Dog And Cat Classification Django
+# Phân Loại Hình Ảnh Chó Mèo Với CNN Và Django
 
 ## Hướng dẫn cho việc chạy trang web:
 #### + Hình ảnh sau tải lên sẽ được xử lý tại hàm services trong thư mục app/views.py.
