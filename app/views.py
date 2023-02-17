@@ -5,7 +5,7 @@ from keras.models import load_model
 import cv2
 import numpy as np
 
-model = load_model('./model/DogCatClassification.h5')
+model = load_model('./model/dog_cat_classification.h5')
 
 # Create your views here.
 def home(request):
@@ -15,8 +15,8 @@ def services(request):
     context = {}
     context['service'] = ''
     context['result'] = ''
-    IMAGE_HEIGHT = 100
-    IMAGE_WIDTH = 100
+    IMAGE_HEIGHT = 256
+    IMAGE_WIDTH = 256
     LABEL_DOG = np.array([[1.]], dtype='float32')
     LABEL_CAT = np.array([[0.]], dtype='float32')
     result = ""
